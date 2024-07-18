@@ -18,31 +18,40 @@ function check() {
         return; 
     }
 
-    if (attempt <= 0) {
+   else if (attempt <= 0) {
         notifywin.textContent = "Oooopssss... You lost the game 😭";
-        result.textContent = "No more chances left";
+        result.textContent = "Magic Number is:"+ magicNumber;
         notifywin.style.backgroundColor = "#ea431f";
         inst.style.backgroundColor = "#ea431f";
+        inst.style.color = "#ffffff";
         adjustInstSize();
         return;
     }
 
-    if (input === magicNumber) {
-        // notifywin.textContent = "Wowww! You won the game 🎁";
+   else if (input === magicNumber) {
+        notifywin.textContent = " ";
         // result.textContent = "You have " + attempt + " chances left";
         result.innerText = "Wowww! You won the game 🎁";
         notifywin.style.backgroundColor = "#53995a";
         inst.style.backgroundColor = "#53995a";
         adjustInstSize();
+        setTimeout(function() {
+            alert("congratulations!!!");
+        }, 1000);
         return;
+        // setTimeout(function() {
+        //     window.location.reload();
+        // }, 3000);
+        
     } 
-    else {
+    else{
         attempt--;
         if (attempt <= 0) {
             notifywin.textContent = "Oooopssss... You lost the game 😭";
-            result.textContent = "No more chances left";
+            result.textContent = "Magic Number is:"+ magicNumber;
             notifywin.style.backgroundColor = "#ea431f";
             inst.style.backgroundColor = "#ea431f";
+            inst.style.color = "#ffffff";
             adjustInstSize();
             return;
         } 
@@ -51,6 +60,7 @@ function check() {
             result.textContent = "You have " + attempt + " chances left";
             notifywin.style.backgroundColor = "#037E8C";
             inst.style.backgroundColor = "#037E8C";
+            inst.style.color = "#ffffff";
             adjustInstSize();
         }
     }
