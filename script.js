@@ -9,11 +9,12 @@ console.log(magicNumber);
 function check() {
     var input = parseInt(guess.value);
 
-    if (input < 1 || input > 100) {
+    if (isNaN(input) || input < 1 || input > 100) {
         notifywin.textContent = "Please enter a valid number between 1 and 100 🥲.";
+        inst.style.backgroundColor = "#405D72";
         result.textContent = "You have " + attempt + " chances left";
         notifywin.style.backgroundColor = "#405D72";
-        inst.style.backgroundColor = "#405D72";
+        inst.style.color = "#ffffff";
         adjustInstSize();
         return; 
     }
