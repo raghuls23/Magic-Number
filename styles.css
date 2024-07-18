@@ -17,6 +17,7 @@ h1 {
     font-size: 40pt;
     margin: 0;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 #gif {
@@ -40,6 +41,7 @@ h1 {
 
 .input-group {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 500px;
     margin-bottom: 20px;
@@ -51,21 +53,19 @@ input, button {
     font-size: 1rem;
     border: none;
     outline: none;
-    border-radius: 5px;
+    border-radius: 10px;
     box-sizing: border-box;
     text-align: center;
-    
 }
 
 input {
     background-color: #ffffff;
     cursor: auto;
-    width: 200px;
+    width: calc(90% - 210px); /* Adjust width considering the button width and margins */
     margin-right: 10px;
     border: 2px solid #000;
-    margin-right: 30px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
-    
+    margin-right: 40px;
 }
 
 button {
@@ -75,15 +75,12 @@ button {
     font-weight: bold;
     box-shadow: 0 6px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
     width: 200px;
-    height: px;
-
 }
 
 button:hover {
     background-color: #59b2f6;
     color: #ffffff;
     font-weight: bolder;
-    /* box-shadow: 0 6px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19); */
 }
 
 #inst {
@@ -97,13 +94,17 @@ button:hover {
     margin-top: 30px;
     text-align: center;
     color: #ffffff;
-    width: 400px;
+    width: 50%;
     max-width: 500px;
-}
-#notifywin {
-    margin-bottom: -10px;
+    overflow: hidden;
 }
 
+#result{
+    margin-top: 4px;
+}
+#notifywin {
+    margin-bottom: 10px;
+}
 
 #tips {
     display: flex;
@@ -124,4 +125,25 @@ button:hover {
 
 #one {
     text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 30pt;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    input, button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #inst {
+        width: 100%;
+        padding: 10px;
+    }
 }
