@@ -3,7 +3,7 @@ var notifywin = document.getElementById("notifywin");
 var result = document.getElementById("result");
 var inst = document.getElementById("inst");
 var magicNumber = Math.floor(Math.random() * 100) + 1;
-var attempt = 5;
+var attempt = 10;
 console.log(magicNumber);
 
 function check() {
@@ -21,7 +21,7 @@ function check() {
 
    else if (attempt <= 0) {
         notifywin.textContent = "Oooopssss... You lost the game 😭";
-        result.textContent = "Magic Number is:"+ magicNumber;
+        result.textContent = "The Magic Number is:"+ magicNumber;
         notifywin.style.backgroundColor = "#ea431f";
         inst.style.backgroundColor = "#ea431f";
         inst.style.color = "#ffffff";
