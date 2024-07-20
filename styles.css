@@ -64,11 +64,11 @@ input {
     width: calc(90% - 210px); /* Adjust width considering the button width and margins */
     margin-right: 10px;
     border: 2px solid #000;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+    /* box-shadow: 0 6px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19); */
     margin-right: 40px;
 }
 
-button {
+#cmg {
     background-color:  #4574a3;
     cursor: pointer;
     color: #ffffff;
@@ -76,6 +76,12 @@ button {
     font-weight: bold;
     box-shadow: 0 6px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
     width: 200px;
+}
+#cmg:hover{
+    background-color: #70a6db;
+    /* color: #ffffff; */
+    font-weight: bolder;
+    
 }
 
 button:hover {
@@ -127,6 +133,15 @@ button:hover {
 
 #one {
     text-align: center;
+}
+#play{
+    margin-top: 20px;
+    background-color: #2991b7;
+    border-radius: 10px;
+    color: #ffffff;
+    /* box-shadow: 0 6px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19); */
+    width: 150px;
+
 }
 
 /* Responsive Styles */

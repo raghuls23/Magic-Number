@@ -4,10 +4,22 @@ var result = document.getElementById("result");
 var inst = document.getElementById("inst");
 var magicNumber = Math.floor(Math.random() * 100) + 1;
 var attempt = 10;
+var gameover = false;
 console.log(magicNumber);
+var ref = document.getElementById("play");
+function refresh(){
+    if(ref){
+        window.location.reload();
+    }
+}
+
 
 function check() {
+    if(gameover === true){
+        return;
+    }
     var input = parseInt(guess.value);
+
 
     if (isNaN(input) || input < 1 || input > 100) {
         notifywin.textContent = "Please enter a valid number between 1 and 100 🥲.";
@@ -28,35 +40,32 @@ function check() {
         adjustInstSize();
         return;
     }
-
-   else if (input === magicNumber) {
+    else if (input === magicNumber) {
         notifywin.textContent = " ";
         // result.textContent = "You have " + attempt + " chances left";
         result.innerText = "Wowww! You won the game 🎁";
         notifywin.style.backgroundColor = "#53995a";
         inst.style.backgroundColor = "#53995a";
         adjustInstSize();
-        setTimeout(function() {
-            alert("congratulations!!!");
-        }, 1000);
-        return;
         // setTimeout(function() {
-        //     window.location.reload();
-        // }, 3000);
-        
-    } 
+        //     alert("");
+        // }, 1000);
+        return;
+    }
+
     else{
         attempt--;
         if (attempt <= 0) {
             notifywin.textContent = "Oooopssss... You lost the game 😭";
-            result.textContent = "Magic Number is:"+ magicNumber;
+            result.textContent = "The Magic Number is:"+ magicNumber;
             notifywin.style.backgroundColor = "#ea431f";
             inst.style.backgroundColor = "#ea431f";
             inst.style.color = "#ffffff";
             adjustInstSize();
             return;
         } 
-        else {
+        
+        else{
             notifywin.textContent = input > magicNumber ? "Your guess is greater than the magic number 🥺" : "Your guess is smaller than the magic number 🫣";
             result.textContent = "You have " + attempt + " chances left";
             notifywin.style.backgroundColor = "#037E8C";
@@ -64,6 +73,7 @@ function check() {
             inst.style.color = "#ffffff";
             adjustInstSize();
         }
+        
     }
 }
 

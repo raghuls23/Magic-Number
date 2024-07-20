@@ -13,12 +13,15 @@
     <div class="box">
         <div class="input-group">
             <input type="number" min="0" max="100" id="guessno" placeholder="Enter your guess">
-            <button onclick="check()">Check My Guess</button>
+            <button id="cmg" onclick="check()">Check My Guess</button>
         </div>
         <div id="inst">
             <div id="notifywin"></div>
             <p id="result">You have 10 chances left</p>
         </div>
+    </div>
+    <div>
+        <button id="play" onclick="refresh()">Play again ⟳ </button>
     </div>
     <div id="tips">
         <h3 id="one">How to play?</h3>
@@ -27,6 +30,7 @@
             <li>You have 10 chances to guess the magic number</li>
         </ol>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
