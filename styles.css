@@ -1,6 +1,6 @@
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #fdfdfe;
+    background-color: #F0F8FF;
     color: #000000;
     display: flex;
     align-items: center;
@@ -10,29 +10,27 @@ body {
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
-    margin-top: -50px;
 }
 
 h1 {
     font-size: 40pt;
-    margin: 0;
-    margin-bottom: 30px;
+    margin: 0 0 30px;
     text-align: center;
 }
 
 #gif {
-    margin-top: 30px;
+    margin-top: 10px;
     height: 90px;
     width: 90px;
 }
 
 .box {
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 550px;
-    background-color: #9fd5fa;
+    background-color: #9fd6fa;
     border-radius: 5px;
     padding: 40px;
     box-sizing: border-box;
@@ -61,32 +59,25 @@ input, button {
 input {
     background-color: #ffffff;
     cursor: auto;
-    width: calc(90% - 210px); /* Adjust width considering the button width and margins */
+    width: calc(90% - 220px);
     margin-right: 10px;
     border: 2px solid #000;
-    /* box-shadow: 0 6px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19); */
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 #cmg {
-    background-color:  #4574a3;
+    background-color: #4574a3;
     cursor: pointer;
     color: #ffffff;
     font-size: 1rem;
     font-weight: bold;
     box-shadow: 0 6px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
     width: 200px;
-}
-#cmg:hover{
-    background-color: #70a6db;
-    /* color: #ffffff; */
-    font-weight: bolder;
-    
+    /* margin-right: 50px; */
 }
 
-button:hover {
+#cmg:hover, #play:hover {
     background-color: #70a6db;
-    /* color: #ffffff; */
     font-weight: bolder;
 }
 
@@ -94,8 +85,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #6fbff7;
-    padding: 0px;
+    background-color: #3E8EDE;
+    padding: 0;
     border-radius: 10px;
     font-weight: bold;
     margin-top: 30px;
@@ -103,12 +94,12 @@ button:hover {
     color: #000000;
     width: 50%;
     max-width: 500px;
-    overflow: hidden;
 }
 
-#result{
+#result {
     margin-top: 4px;
 }
+
 #notifywin {
     margin-bottom: 10px;
     color: #ffffff;
@@ -120,7 +111,6 @@ button:hover {
     width: 100%;
     max-width: 500px;
     font-size: 12pt;
-    background-color: #ffffff;
     padding: 20px;
     margin-top: 20px;
     align-items: center;
@@ -129,22 +119,57 @@ button:hover {
 
 #tp {
     margin-top: -5px;
+    margin-right: -20px;
 }
 
 #one {
     text-align: center;
 }
-#play{
+
+#play {
     margin-top: 20px;
     background-color: #2991b7;
     border-radius: 10px;
     color: #ffffff;
-    /* box-shadow: 0 6px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19); */
     width: 150px;
-
 }
 
-/* Responsive Styles */
+#diff {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F0F8FF;
+    color: #000000;
+}
+
+#head {
+    margin-right: 10px;
+}
+
+#easy, #hard {
+    margin: 0 5px;
+}
+#easy{
+    background-color: rgb(88, 230, 88);
+    padding: 10px;
+}
+#hard{
+    background-color: rgb(248, 89, 89);
+    padding: 10px;
+}
+#easy:hover{
+    background-color: rgb(0, 174, 0);
+    font-weight: bolder;
+}
+
+#hard:hover{
+    background-color: rgb(243, 9, 9);
+    font-weight: bolder;
+}
 @media (max-width: 600px) {
     h1 {
         font-size: 30pt;
@@ -162,5 +187,19 @@ button:hover {
     #inst {
         width: 100%;
         padding: 10px;
+    }
+
+    #notifywin {
+        width: 100%;
+        padding: auto;
+    }
+
+    #diff {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #head {
+        margin-bottom: 10px;
     }
 }
