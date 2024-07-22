@@ -10,10 +10,12 @@ var easyBtn = document.getElementById("easy");
 var hardBtn = document.getElementById("hard");
 var result = document.getElementById("result");
 var attempt = 0;
-
+const canvas = document.querySelector('#confetti');
+const jsConfetti = new JSConfetti();
 easyBtn.addEventListener("click", function() {
     attempt = 5;
     result.textContent = `You have ${attempt} chances left`;
+    result.style.color = "#ffffff";
     // result.style.backgroundColor = "#6fbff7";
     // inst.style.backgroundColor ="#6fbff7";
 });
@@ -21,6 +23,7 @@ easyBtn.addEventListener("click", function() {
 hardBtn.addEventListener("click", function() {
     attempt = 10;
     result.textContent = `You have ${attempt} chances left`;
+    result.style.color = "#ffffff";
     // result.style.backgroundColor = "#6fbff7";
     // inst.style.backgroundColor ="#6fbff7";
 });
@@ -66,6 +69,7 @@ function check() {
         result.innerText = "Wowww! You won the game 🎁";
         notifywin.style.backgroundColor = "#53995a";
         inst.style.backgroundColor = "#53995a";
+        jsConfetti.addConfetti();
         adjustInstSize();
         // setTimeout(function() {
         //     alert("");
